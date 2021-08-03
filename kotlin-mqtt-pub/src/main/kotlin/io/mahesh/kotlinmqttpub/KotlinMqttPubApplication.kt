@@ -8,8 +8,9 @@ class KotlinMqttPubApplication
 
 fun main(args: Array<String>) {
 	runApplication<KotlinMqttPubApplication>(*args)
-
-	notifyDownStream()
+	repeat(3) {
+		notifyDownStream()
+	}
 }
 
 fun notifyDownStream() {
